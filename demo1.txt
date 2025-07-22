@@ -1,1 +1,204 @@
-This is SABARIVASUDEV 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AASk STORE</title>
+    
+</head>
+<body>
+    <style>
+        .discount{
+            background-color: black;
+            padding: top 5px;
+            font-style: italic;
+            color: beige;
+            padding-left: 30%;
+        }
+        .name{
+            font-size: 50px;
+            font-family:Orbitron,sans-serif;
+            letter-spacing: 5px;
+            padding-top: 20Px;
+        }
+        .menu{
+        
+            background-color: black;
+        }
+        .menu nav a{
+            text-decoration: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: inline-block;
+            color:white;
+            padding-left: 208px;
+            text-align: center;
+            margin-right: 90px;    
+        }
+        
+        .menu nav a:hover{
+            background-color:red;
+            border: 10px;
+            
+        }
+        .op{
+            position: relative;
+            display: inline-block;
+        }
+        .opt{
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid;
+            padding: 5px;
+        }
+        .op:hover.opt{
+            display: block;
+        }
+        .opt a:hover{
+            background-color: blue;
+            color: blanchedalmond;
+        }
+
+        
+        .image{
+            padding-top: 20px;
+            padding-left: 450px;
+            height: 40%;
+            width: 40%;
+        }
+        .simpletext{
+            text-align: justify;
+            font-size:15px;
+            font: 0.5em sans-serif;
+            font-style: italic;
+        }
+        .section{
+            padding-left: 10%;    
+        }   
+        .section button{
+            color:black;
+            background-color:purple;   
+            padding-right: 10px;
+        }
+        .info{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .infobox{
+            width: 300px;
+            overflow: hidden;
+            justify-content: flex-start;
+            flex: 0 0 48%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .infohead{
+            background-color: black;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+
+
+        }
+        .infocontent{
+            background: -moz-linear-gradient(to right,#ff4d4d,#ff9999);
+            background-color:red;
+            color: antiquewhite;
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+            border: 1px solid;
+        }
+        
+
+    </style>
+    <marquee>AASK SPECIAL OFFER UPTO 45% OFF AND FREE SHIPPING</marquee>   
+    
+    <div class="name">
+        <center>
+            <hi>AASK STORE</hi>
+        </center>
+        
+    </div>
+    <div class="menu">
+        <nav>
+            <a href="online.html">Home</a>
+            <div class="op">
+                <a href="https://www.meesho.com/">Sales</a>
+                <div class="opt">
+                    <a href="">Domectic</a>
+                    <a href="">International</a>
+                </div>
+            </div>
+            
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    </div>
+    <div>
+        <img src="image1.jpg" class="image">
+    </div>
+    <div>
+        <center>
+            <h2>Simplify Your Life With Quality Essentials</h2>
+
+        </center>
+        <div class="simpletext"><center>AASK STORE is your one-stop destination for premium household essentials, 
+            kitchen accessories, health and beauty products, and 
+            innovative smart gadgets.<hr>
+        </center>
+        </div>
+    </div>
+    <div>
+        <h2>EXPLORE OUR BEST SELLINGS</h2>
+    </div>
+    <div class="section">
+        <button>Mensware</button>
+        <button>Womensware</button>
+        <button>Kidsware</button>
+        <button>Partyware</button>
+        <button>Shoes</button>
+        <button>Slippers</button>
+    </div>
+    <div>
+        <center>
+            <h1>SHOPPING INFORMATION</h1>
+        </center>
+    </div>
+    <div class="info">
+        <div class="infobox">
+            <div class="infohead">Order Processing Time</div>
+            <div class="infocontent">All orders are processed within 1-2 business days. You will receive a confirmation email once your order is shipped</div>
+        </div>
+        <div class="infobox">
+            <div class="infohead">Shipping Options</div>
+            <div class="infocontent">We offer standard, express, and same-day delivery (based on your location). Shipping charges vary by method and location</div>
+        </div>
+        <div class="infobox">
+            <div class="infohead">Payment Methods</div>
+            <div class="infocontent">We accept payments via credit/debit cards, UPI, net banking, and cash on delivery (COD) for selected areas</div>
+        </div>
+        <div class="infobox">
+            <div class="infohead">Tracking Your Order</div>
+            <div class="infocontent">Once your order is shipped, you’ll receive a tracking link via email or SMS to monitor your delivery in real time.</div>
+        </div>
+        <div class="infobox">
+            <div class="infohead">Return & Exchange Policy</div>
+            <div class="infocontent">Items can be returned or exchanged within 7 days of delivery. Products must be unused and in original packaging</div>
+        </div>
+        <div class="infobox">
+            <div class="infohead">Out of Stock Items</div>
+            <div class="infocontent">If a product is out of stock after ordering, we’ll notify you immediately and offer a refund or replacement.</div>
+        </div>
+        
+    </div>
+    
+   
+
+   
+</body>
+</html>
