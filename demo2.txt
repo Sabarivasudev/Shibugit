@@ -1,1 +1,350 @@
-This demo 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sbarivasudev</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, Iam <span>Sabarivasudev</span><br></h1>
+                <p>Full-Stack Developer</p>
+            </div>
+        </div>
+    <!-- about -->
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Sabari.JPG" ><br>
+                    <h4>Name: Sabarivasudev.K</h4><br>
+                    <h4>Location: Coimbatore, TamilNadu</h4><br>
+                    <h4>E-Mail: sabarishibu2746@gmail.com</h4><br>
+                    <h4>Phone: +91-8220909728</h4><br>
+                    <a href="https://github.com/Sabarivasudev/Shibugit" target="_blank">GitHub</a><br><br>
+                    <a href="Sabarivasudev.pdf" target="_blank"> Resume</a>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Aspiring Full Stack Developer with hands-on experience in building responsive web applications using React.js, HTML, CSS, and JavaScript for the frontend, and Java for backend development. Passionate about clean code, UI design, and learning new technologies to build user-focused solutions. Eager to contribute to real-world projects and grow in a collaborative team environment.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('educations')">Educations</p>
+                        <p class="tab-links"onclick="opentab('projects')">Projects</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Language</span><br>Java, JavaScript, HTML, CSS.</li>
+                            <li><span>Frameworks & Libraries</span><br>React.js</li>
+                            <li><span>Tools</span><br>Visual Studio Code, Git,GitHub</li>
+                            <li><span>DataBase</span><br>MySQL</li>
+                            <li><span>Soft Skills</span><br>Communication, Problem Solving, <br>Quick Learner, Team Player,<br>Adaptability, Time Management.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="educations">
+                        <ul>
+                            <li><span>Degree</span><br>Bachelor of Engineering in Electronics and Communication Engineering.<br>Hindusthan college Of Engineering And Technology.</li>
+                            <li><span>Batch</span><br>May2021-May2025</li>
+                            <li><span>CGPA:</span><br>7.8/10</li>
+                            <li><span>Higher Secondary Certificate</span><br>Nirmala matha Convent Matriculation Higher Secondary School.</li>
+                            <li><span>Board|Medium</span><br>State Board|English Medium</li>
+                            <li><span>Batch</span><br>May2020-May2021</li>
+                            <li><span>Percentage</span><br>82%</li>
+                            <li><span>Secondary School Leaving Certificate</span><br>Nirmala matha Convent Matriculation Higher Secondary School.</li>
+                            <li><span>Board|Medium</span><br>State Board|English Medium</li>
+                            <li><span>Batch</span><br>May2018-May2019</li>
+                            <li><span>Percentage</span><br>71%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-content" id="projects">
+                        <ul>
+                            <li><span>Project 1</span><br>Title:Drowsy Driver Detector.</li>
+                            <li><span> Description</span><br>The Drowsy Driver Detector is a safety-focused system designed to monitor the driver’s alertness in real-time and issue alerts if signs of drowsiness are detected. The goal is to prevent road accidents caused by driver fatigue.</li>
+                            <li><span>Tech Stack</span><br>Python, OpenCV, Haar Cascade Classifier, Dlib, Raspberry Pi, Camera Module</li>
+                            <li><span>Outcomes</span><br>Successfully detected drowsiness with high accuracy and issued alerts within 1 second of eye closure</li>
+                            <li><span>Project 2</span><br>Title:Crop Predictor</li>
+                            <li><span> Description</span><br>The Crop Predictor is a machine learning-based system designed to recommend the most suitable crop for cultivation based on soil and environmental parameters. It aims to support farmers in maximizing yield and making informed agricultural decisions.</li>
+                            <li><span>Tech Stack</span><br>Python, Pandas, Scikit-learn, NumPy, Matplotlib</li>
+                            <li><span>Outcomes</span><br>Achieved 85% accuracy in crop prediction using Random Forest algorithm</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    <div id="contact">
+        <div class="contact-me">
+            <center>
+                <h1>Contact Me</h1>
+                <form id="contact-form">
+                    <input type="text" name="Name" placeholder="Enter Your Name" required>
+                    <input type="text" name="Email" placeholder="Enter  Your Mail ID" required>
+                    <textarea name="Message" rows="6" placeholder="Enter Your Message"></textarea><br>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </center>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sabarivasudev|All Rights Reserved</p>
+    </div>
+
+    </div>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(backgroundimg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    text-align: left;
+    left: 900px;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #ff04ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 40px;
+    margin-top: 20px;
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    top: 30%;
+    padding-right: 300px;
+}
+.header-text p{
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    top: 40%;
+    padding-right: 350px;
+
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/* ---------------------about----------------------------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 90%;
+    border-radius: 15px;
+}
+.about-col-1 a{
+    text-decoration: none;
+    font-size: 18px;
+    color:blue;
+}
+.about-col-2{
+    flex-basis: 60%;
+   
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-content ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-content ul li span{
+    color: #ff004f;
+    font-size: 14px;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active-tab{
+    display: block;
+}
+/* ---------------------------contact------------------------------------------------------------------- */
+.contact-me{
+    flex-basis: 35%;
+    margin-top: 60px;
+}
+.contact-me button{
+    color:#fff;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #ff004f;
+}
+.contact-me form{
+    width: 80%;
+}
+form input{
+    width: 80%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+}
+form textarea{
+    width: 80%;
+    height: 80%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+    </style>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+         e.preventDefault();
+
+         fetch("YOUR_WEB_APP_URL", {
+           method: "POST",
+           body: JSON.stringify({
+             name: this.name.value,
+             email: this.email.value,
+             message: this.message.value
+           }),
+           headers: {
+             "Content-Type": "application/json"
+           }
+       })
+         .then(response => {
+            if (response.ok) {
+              alert("Message sent successfully!");
+              this.reset();
+            } else {
+              alert("Failed to send message.");
+            }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("Something went wrong. Try again later.");
+        });
+    });
+
+    </script>
+
+    
+</body>
+</html>
