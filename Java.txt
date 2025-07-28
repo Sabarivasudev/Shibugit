@@ -1,0 +1,109 @@
+// 1.--------------------------------------------------------------------------------------> Bank ATM <----------------------------------------------------------------------
+import java.util.Scanner;
+
+public class BankATM {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        double balance = 5000.00;
+        try {
+            System.out.println("Enter the Amount:");
+            double Amount = scan.nextDouble();
+            
+
+            if (Amount <=200){
+                throw new IllegalArgumentException("Enter a amount greater than 200");
+            }
+
+            else if ( Amount > balance){
+                throw new ArithmeticException("Insufficent balance");
+            }
+            balance -= Amount;
+            System.out.println("Withdrawal Successful");
+            System.out.println("Balance :"+balance);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        } 
+        catch (IllegalArgumentException e) {
+            System.out.println("Invalid input: " + e.getMessage());
+        }    
+        catch(Exception e){
+                System.out.println("Error");
+            }
+    }
+    
+}
+// ------------------------------------------------------------------------------------------------> END <----------------------------------------------------------------------------------------------------
+// 2.-------------------------------------------------------------------------------------------------> Electric Bill Calc<--------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class electric 2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+
+        System.out.print("Enter the number of customers: ");
+        int numCustomers = scan.nextInt();
+
+       
+        for (int i = 1; i <= numCustomers; i++) {
+            System.out.println("\nEnter details for customer " + i + ":");
+            
+            System.out.print("Enter the number of units consumed: ");
+            int units = scan.nextInt();
+            double bill = 0;
+
+           
+            if (units <= 100) {
+                bill = units * 1.5;
+            } else if (units <= 300) {
+                bill = (100 * 1.5) + ((units - 100) * 2);
+            } else {
+                bill = (100 * 1.5) + (200 * 2) + ((units - 300) * 3);
+            }
+
+            System.out.println("Customer " + i + " - Total Bill: " + bill);
+        }
+        
+     
+    }
+    
+}
+// ------------------------------------------------------------------------------------------------------------------------------->END<------------------------------------------------------------------------------
+// 3.---------------------------------------------------------------------------------------------------------------------------->Grade Calc<------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class gradecalculator {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter number of Subjects:");
+        int Subjects = scan.nextInt();
+        int[] marks = new int[Subjects];
+        int total = 0;
+        for (int i = 0; i < Subjects; i++) {
+            
+            System.out.println("Enter marks  for subject"+(i+1)+":");
+            marks[i]=scan.nextInt();
+            total+=marks[i];
+        }
+        double avg = total/(double)Subjects;
+        char grade;
+        if (avg >= 90)
+            grade = 'A';
+        else if(avg>=75)
+            grade = 'B';
+        else if (avg>=60)
+            grade = 'C';
+        else if(avg>=50)
+            grade = 'D';
+        else
+            grade ='F';
+        System.out.println("Total"+total);
+        System.out.println("Average"+avg);
+        System.out.println("Grade"+grade);
+    }
+}
+// ---------------------------------------------------------------------------------------------------------->END<-----------------------------------------------------------------------------------------------------
+// 4.------------------------------------------------------------------------------------------------------------>
+
