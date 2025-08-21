@@ -1,0 +1,149 @@
+import { useState } from "react";
+
+function Todo() {
+  const [task, setTask] = useState("");
+  const [todos, setTodos] = useState([]);
+  const [completedHistory, setCompletedHistory] = useState([]);
+  const [showCompleted, setShowCompleted] = useState(false);
+
+  const addTask = () => {
+    const trimmed = task.trim();
+    if (trimmed !== "" && !todos.some(todo => todo.text === trimmed)) {
+      const now = new Date().toLocaleString();
+      const newTask = {
+        id: Date.now(),
+        text: trimmed,
+        createdAt: now,
+      };
+      setTodos([...todos, newTask]);
+      setTask("");
+    }
+  };
+
+  const markAsDone = (id) => {
+    const now = new Date().toLocaleString();
+    const taskToComplete = todos.find(todo => todo.id === id);
+    const completedTask = {
+      ...taskToComplete,
+      completedAt: now,
+    };
+    setCompletedHistory([...completedHistory, completedTask]);
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
+  const deleteTask = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
+  const clearAll = () => {
+    setTodos([]);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") addTask();
+  };
+
+  return (
+    <div style={{
+      maxWidth: "450px",
+      margin: "50px auto",
+      padding: "20px",
+      borderRadius: "10px",
+      background: "#e6f7f7",
+      boxShadow: "0px 4px 8px rgba(0,0,0,0.1)"
+    }}>
+      <h1 style={{ textAlign: "center", color: "black" }}>Todo App</h1>
+
+      <div style={{ display: "flex", marginBottom: "20px" }}>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Add your new todo"
+          style={{ flex: 1, padding: "8px", borderRadius: "5px", border: "1px solid #ccc" }}
+        />
+        <button onClick={addTask} style={{ marginLeft: "10px", padding: "8px 12px" }}>+</button>
+      </div>
+
+      {!showCompleted ? (
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          {todos.map((todo) => (
+            <li key={todo.id} style={{
+              marginBottom: "10px",
+              padding: "8px",
+              background: "#fff",
+              borderRadius: "5px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center"
+            }}>
+              <span style={{ color: "black" }}>{todo.text}</span>
+              <div>
+                <button onClick={() => markAsDone(todo.id)} style={{ marginRight: "8px" }}>✅</button>
+                <button onClick={() => deleteTask(todo.id)}>🗑</button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <>
+          <h3 style={{color:"black"}}>Completed Tasks</h3>
+          {completedHistory.length === 0 ? (
+            <p>No tasks completed yet.</p>
+          ) : (
+            <ul style={{ listStyle: "none", padding: 0 }}>
+              {completedHistory.map((todo) => (
+                <li key={todo.id} style={{
+                  marginBottom: "10px",
+                  padding: "8px",
+                  background: "#d9f7be",
+                  borderRadius: "5px"
+                }}>
+                  <div className="completedtask" style={{color:"black"}}>
+                    <p><strong>Task:</strong> {todo.text}</p>
+                    <p><strong>Assigned:</strong> {todo.createdAt}</p>
+                    <p><strong>Completed:</strong> {todo.completedAt}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
+      )}
+
+      <div style={{ marginTop: "20px", textAlign: "center" }}>
+        {!showCompleted && (
+          <p style={{ color: "black" }}>
+            You have {todos.length} pending task(s)
+          </p>
+        )}
+        <button onClick={() => setShowCompleted(!showCompleted)}>
+          {showCompleted ? "Show Pending" : "Completed"}
+        </button>
+        {!showCompleted && (
+          <button onClick={clearAll} style={{ marginLeft: "10px" }}>Clear All</button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default Todo;
+------------------------------------------------------------------------------------------------------------------------------------------------
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import Todo from './To-Do';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>My To-Do App</h1>
+      <Todo /> {/* ← Corrected component name */}
+    </div>
+  );
+}
+
+export default App;
